@@ -18,10 +18,6 @@ var namePJ6 = "default";
 
 yourbot.login(process.env.TOKEN);
 
-yourbot.registry.registerGroup('other', 'Other');
-yourbot.registry.registerCommandsIn(__dirname + "/commands");
-yourbot.registry.registerDefaults();
-
 yourbot.on('message', message =>{
   let splitMessage = message.content.split(' ');
   if(!message.guild) return
